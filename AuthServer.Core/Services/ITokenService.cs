@@ -1,4 +1,5 @@
-﻿using AuthServer.Core.DTO_s;
+﻿using AuthServer.Core.Configuration;
+using AuthServer.Core.DTO_s;
 using AuthServer.Core.Models;
 using System;
 using System.Collections.Generic;
