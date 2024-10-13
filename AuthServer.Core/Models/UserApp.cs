@@ -9,6 +9,6 @@ namespace AuthServer.Core.Models
 {
     public  class UserApp:IdentityUser
     {
-        public string UserId { get; set; }
+        public string City { get; set; }
     }
 }
