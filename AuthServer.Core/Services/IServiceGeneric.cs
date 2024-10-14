@@ -14,9 +14,9 @@ namespace AuthServer.Core.GenericServices
         Task<Response<IEnumerable<TDTO>>> GetAllAsync();
         //??
         Task<Response<IEnumerable<TDTO>>> Where(Expression<Func<TEntity, bool>> predicate);
-        Task <Response<TDTO>>AddAsync(TEntity entity);
-        Task<Response<NoDataDto>> Remove(TEntity entity);
-        Task<Response<NoDataDto>> Update(TEntity entity);
+        Task <Response<TDTO>>AddAsync(TDTO entity);
+        Task<Response<NoDataDto>> Remove(int id);
+        Task<Response<NoDataDto>> Update(TDTO entity, int id);
 
     }
 }

@@ -18,16 +18,16 @@ namespace SharedLibrary.DTO_s
 
         public ErrorDto Error { get; private set; }
 
-        public Response<T> Success(T data, int statusCode) 
+        public static Response<T> Success(T data, int statusCode) 
         {
             return new Response<T> { Data = data, StatusCode = statusCode, IsSuccess= true  };
         }
-        public Response<T> Success(int statusCode)
+        public static Response<T> Success(int statusCode)
         {
             return new Response<T> {/* Data = default,*/ StatusCode = statusCode, IsSuccess = true };
         }
 
-        public Response<T> Fail(ErrorDto errorDto ,int statusCode)
+        public static Response<T> Fail(ErrorDto errorDto ,int statusCode)
         {
             return new Response<T> 
             {
@@ -36,7 +36,7 @@ namespace SharedLibrary.DTO_s
                 IsSuccess = false
             };
         }
-        public Response<T> Fail( string errormessage,int statusCode, bool isShow)
+        public static Response<T> Fail( string errormessage,int statusCode, bool isShow)
         {
             var errorDto = new ErrorDto(errormessage,isShow);
             return new Response<T>
