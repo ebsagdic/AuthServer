@@ -20,6 +20,7 @@ namespace AuthServer.Service.Services
         {
             _unitOfWork = unitOfWork;
             _genericRepositoy = genericRepositoy;
+            
         }
         public async Task<Response<TDTO>> AddAsync(TDTO tDto)
         {
