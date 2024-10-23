@@ -1,8 +1,10 @@
+using AuthServer.Core.Configuration;
 using SharedLibrary.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 //Options Pattern ,appsettings.json dosyasýnda yer alan yapýlandýrma verilerini güçlü bir þekilde yönetmek amacýyla kullanýlýr. 
 builder.Services.Configure<CustomTokenOption>(builder.Configuration.GetSection("TokenOption"));
+builder.Services.Configure<List<Client>>(builder.Configuration.GetSection("Client"));
 
 // Add services to the container.
 

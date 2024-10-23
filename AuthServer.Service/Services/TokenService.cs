@@ -43,7 +43,7 @@ namespace AuthServer.Service.Services
         {
             var userList = new List<Claim>
             {
-                new Claim (ClaimTypes.NameIdentifier, userApp.Id),
+                new Claim(ClaimTypes.NameIdentifier, userApp.Id),
                 new Claim(ClaimTypes.Email, userApp.Email),
                 new Claim(ClaimTypes.Name, userApp.UserName),
                 new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
