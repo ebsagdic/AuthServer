@@ -36,7 +36,7 @@ namespace AuthServer.Service.Services
 
         public async Task<Response<UserAppDto>> GetUserByNameAsync(string userName)
         {
-            var user = await _userManager.FindByIdAsync(userName);
+            var user = await _userManager.FindByNameAsync(userName);
             if(user == null)
             {
                 return Response<UserAppDto>.Fail("Username not found",404,true);
